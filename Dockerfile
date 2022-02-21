@@ -9,7 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
 RUN apk add --no-cache --virtual .build-deps yarn git build-base g++ python3
 RUN apk add --no-cache --virtual .npm-deps cairo-dev pango-dev libjpeg-turbo-dev
 RUN apk add --no-cache --virtual .fonts libmount ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family font-noto font-noto-emoji fontconfig
-#RUN apk add wqy-zenhei --no-cache --repository http://nl.alpinelinux.org/alpine/edge/releases --allow-untrusted
+##RUN apk add wqy-zenhei --no-cache --repository http://nl.alpinelinux.org/alpine/edge/releases --allow-untrusted
 RUN apk add --no-cache --virtual .runtime-deps graphviz
 
 COPY package*.json .
